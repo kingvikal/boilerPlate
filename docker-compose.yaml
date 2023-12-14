@@ -1,13 +1,13 @@
 version: "3"
 services:
-  hr_mgmt:
-    image: hr-mgmt
-    container_name: hr-mgmt
+  appointment:
+    image: appointment
+    container_name: appointment
     build:
       context: .
       dockerfile: Dockerfile
     env_file:
-      - ./.env
+      - ./.env.dev
     ports:
       - "5050:8000"
     volumes:
